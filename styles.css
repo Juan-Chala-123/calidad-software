@@ -1,0 +1,264 @@
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --primary: #1d4ed8;
+  --primary-dark: #163ea8;
+  --secondary: #0f172a;
+  --accent: #dbeafe;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #dfeaf5;
+  --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #edf4ff 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+.topbar {
+  background: rgba(15, 23, 42, 0.96);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9rem 0;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0f172a, #1d4ed8 60%, #3b82f6);
+  color: white;
+  padding: 4rem 0 3rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 1rem 0;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.1;
+}
+
+.hero p {
+  margin: 0;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.05rem;
+}
+
+.hero-panel {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 1.5rem;
+  backdrop-filter: blur(6px);
+}
+
+.hero-panel h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+}
+
+.hero-panel ul {
+  padding-left: 1.15rem;
+  margin: 0;
+  line-height: 1.9;
+}
+
+.page-content {
+  padding: 3rem 0 4rem;
+}
+
+.matrix {
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--card);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.matrix-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #e0edff;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+}
+
+.cell {
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--border);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title {
+  background: #dfeaff;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+.matrix-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.result {
+  background: #f9d94f;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-size: clamp(1rem, 1.7vw, 1.3rem);
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.result p {
+  margin: 0;
+}
+
+.activities {
+  background: white;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.activities ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.activities li {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1rem;
+  line-height: 1.6;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.activities li:last-child {
+  border-bottom: none;
+}
+
+.explanatory {
+  margin-top: 3rem;
+  background: #f8f9fb;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.explanatory h2 {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.topic {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #dbeafe;
+  border-radius: 16px;
+  padding: 1.2rem 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.topic h3 {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+  color: var(--primary-dark);
+  font-size: 1.35rem;
+  line-height: 1.5;
+}
+
+.topic p {
+  margin: 0.45rem 0;
+  line-height: 1.7;
+}
+
+.subtopic {
+  background: #eef5ff;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  padding: 1rem 1rem;
+  margin-top: 1rem;
+}
+
+.subtopic h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: var(--primary-dark);
+  line-height: 1.5;
+}
+
+.subtopic p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.footer {
+  background: var(--secondary);
+  color: white;
+  text-align: center;
+  padding: 1.2rem 0;
+}
+
+@media (max-width: 760px) {
+  .hero-grid,
+  .matrix-header,
+  .matrix-row {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}
